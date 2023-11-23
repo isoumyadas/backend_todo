@@ -8,7 +8,7 @@ import {
 } from "../controllers/userssPf.js";
 
 //middleware
-import { isAuth } from "../middlewares/auth.js";
+import { isAuthenticated } from "../middlewares/auth.js";
 
 // adding router
 const router = express.Router();
@@ -20,7 +20,7 @@ router.post("/login", login);
 router.get("/logout", logout);
 
 // we can chain it, cauz this all have same endpoint
-router.get("/me", isAuth, myProfile);
+router.get("/me", isAuthenticated, myProfile);
 
 // router.get("/userid/:id", getUserById);
 // router.put("/userid/:id", updateUserById);
