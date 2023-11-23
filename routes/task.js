@@ -14,6 +14,6 @@ router.get("/myTask", isAuthenticated, getMyTask);
 router
   .route("/:id")
   .put(isAuthenticated, updateTask)
-  .delete(isAuth, deleteTask);
+  .delete(isAuthenticated, deleteTask);
 
 export default router;
