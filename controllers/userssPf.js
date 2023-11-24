@@ -7,7 +7,10 @@ import ErrorHandler from "../middlewares/error.js";
 
 //===================================================================================
 // getAllUsers
-export const getAllUsers = async (req, res) => {};
+export const getAllUsers = async (req, res) => {
+  try {
+  } catch (error) {}
+};
 
 //=====================================================================================
 // login
